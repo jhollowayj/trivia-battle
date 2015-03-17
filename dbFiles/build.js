@@ -41,6 +41,7 @@ MongoClient.connect("mongodb://localhost/", function(err, db) {
 	myDB.createCollection("char_inform", function(err, char_inform){
 
 		addObject(char_inform, { 
+			_id: "charname1",
 			user_id:"test1",
 			exp: 0,
 			gold: 0,
@@ -54,6 +55,7 @@ MongoClient.connect("mongodb://localhost/", function(err, db) {
 		});
 
 		addObject(char_inform, { 
+			_id: "charname2",
 			user_id:"test2",
 			exp: 0,
 			gold: 0,
@@ -67,6 +69,7 @@ MongoClient.connect("mongodb://localhost/", function(err, db) {
 		});
 
 		addObject(char_inform, { 
+			_id: "charname3",
 			user_id:"Helix",
 			exp: 0,
 			gold: 0,
