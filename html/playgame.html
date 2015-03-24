@@ -1,27 +1,61 @@
 <html>
-  <head>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="playgame.js"></script>
-    <link rel="stylesheet" type="text/css" href="trivia-battle.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="trivia-battle.css"/>
     <title>QuizBattle!</title>
-  </head>
-  <body>
-    <div id="all">
-      <div id="header">
-      <span>Question</span> 
-      <span id="questionNumber">##</span></div>
-      <div id="content">
-        <div id="question">
-          <span>I am a question</span>
-        </div>
-        <div id="answer">
-        <button id="a1">Answer #1</button> 
-        <button id="a1">Answer #2</button> 
-        <button id="a1">Answer #3</button> 
-        <button id="a1">Answer #4</button></div>
-      </div>
-      <div id="footer">
-        <span>I&#39;m the footer</span>
-      </div>
+    /head>
+<body ng-app="game">
+<div ng-controller="GameController">
+    <div id="header">
+        <span>Question</span>
+        <span id="questionNumber">{{question.id}}</span></div>
+</div>
+<div id="content">
+    <div id="question">
+        <span>{{question.Question}}</span>
     </div>
-  </body>
+    <div id="answer">
+        <button id="a1">{{question.AnswerA}}</button>
+        <button id="a2">{{question.AnswerB}}</button>
+        <button id="a3">{{question.AnswerC}}</button>
+        <button id="a4">{{question.AnswerD}}</button>
+    </div>
+</div>
+</div>
+<div id="footer">
+    <span>I&#39;m the footer</span>
+</div>
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
